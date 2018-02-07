@@ -12,4 +12,7 @@
 // alert(isNaN(100)) // false
 // alert(isNaN('100')) // false
 // alert(isNaN('blue')) // false
-alert(isNaN(false)) // true becomes 1 - false becomes 0
+//alert(isNaN(false)) // true becomes 1 - false becomes 0
+
+var num1 = parseInt("12324lkdnsl");
+console.log(num1);
