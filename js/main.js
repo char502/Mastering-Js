@@ -1,0 +1,1 @@
+alert("new web page");
