@@ -172,7 +172,7 @@ var num = 0
 outerLabel: for (var i = 0; i < 10; i++) {
   for (var ii = 0; ii < 10; ii++) {
     if (i == 5 && ii == 5) {
-      continue outerLabel; // result is 95 as the one iteration it missed encountered the continue statement
+      continue outerLabel // result is 95 as the one iteration it missed encountered the continue statement
     }
     num++
   }
@@ -180,15 +180,45 @@ outerLabel: for (var i = 0; i < 10; i++) {
 console.log(num)
 // result = 95
 
-
 var num = 0
 
 outerLabel: for (var i = 0; i < 10; i++) {
   for (var ii = 0; ii < 10; ii++) {
     if (i == 5 && ii == 5) {
-      break outerLabel; // result is 95 as the one iteration it missed encountered the continue statement
+      break outerLabel // result is 95 as the one iteration it missed encountered the continue statement
     }
     num++
   }
 }
 console.log(num)
+
+// Switch statement
+//Numbers
+
+var i = 100;
+
+switch (i) {
+  case 10:
+    console.log('10')
+    break
+  case 20:
+    console.log('20')
+    break
+  default:
+    console.log('Nothing found')
+}
+
+//strings
+
+var i = "hi";
+
+switch (i) {
+  case "hi":
+    console.log('hi there')
+    break
+  case "hello":
+    console.log('hello there')
+    break
+  default:
+    console.log('No one there')
+}
