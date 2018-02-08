@@ -193,9 +193,9 @@ outerLabel: for (var i = 0; i < 10; i++) {
 console.log(num)
 
 // Switch statement
-//Numbers
+// Numbers
 
-var i = 100;
+var i = 100
 
 switch (i) {
   case 10:
@@ -208,17 +208,71 @@ switch (i) {
     console.log('Nothing found')
 }
 
-//strings
+// strings
 
-var i = "hi";
+var i = 'hi'
 
 switch (i) {
-  case "hi":
+  case 'hi':
     console.log('hi there')
     break
-  case "hello":
+  case 'hello':
     console.log('hello there')
     break
   default:
     console.log('No one there')
 }
+
+// functions
+
+function total (one, two) {
+  var totalThis = one + two
+  return totalThis
+}
+
+var result = total(1, 2)
+console.log(result)
+
+// multiple returns - as soon as the code matches it will stop executing 
+
+function nameCheck (name) {
+  if (name == 'Charlotte') {
+    return 'Hi Charlotte'
+  } else {
+    return "I don't know you"
+  }
+  alert('hkhkhkjh'); // never executed, all conditions covered above
+}
+
+var result = nameCheck('hjhhjh')
+console.log(result)
+
+// Array like object represents arguments internally []
+// js creates and internal array to hold the arguments whether defined or not
+// However, better to have the params defined as clearer to read/ less confusing when come back to it later on
+
+function sayHi () { // arguments not defined in ()
+  return arguments[0] + ' ' + arguments[1] + ' ' + arguments[2] // can still specify using array/bracket notation
+}
+
+alert(sayHi('Charlotte', 'Js functions', 'right'))
+
+// but better like this:
+
+function sayHi (name, something, opinion) { // arguments defined in()
+  return arguments[0] + ' ' + arguments[1] + ' ' + arguments[2] // can still specify using array/bracket notation
+}
+
+alert(sayHi('Charlotte', 'Js functions', 'right'))
+
+// Can determine number of arguments using Arraylength property
+
+function shopping (item1, item2) {
+  if (arguments.length >= 2) {
+    console.log('you are granted 20% discount')
+  } else if (arguments.length <= 1) {
+    console.log('you are not getting any discount')
+  }
+}
+
+shopping('Milk');
