@@ -42,25 +42,52 @@
 
 // Nested Object
 
-var person = {
-  name: 'Ryan',
-  age: 30,
-  sayName: function () {
-    return this.name;
-  },
-  likes: {
-    movies: {
-        one: 'The Matrix',
-        two: 'Jurassic Park',
-        three: 'Alien'
-    },
-    books: 'js Ninja'
-  }
-};
+// var person = {
+//   name: 'Ryan',
+//   age: 30,
+//   sayName: function () {
+//     return this.name;
+//   },
+//   likes: {
+//     movies: {
+//         one: 'The Matrix',
+//         two: 'Jurassic Park',
+//         three: 'Alien'
+//     },
+//     books: 'js Ninja'
+//   }
+// };
 
 // console.log('My fav film is: ' + person.likes.movies)
 
 //console.log('My fav film is: ' + person.likes["movies"] + ' and book ' + person.likes["books"]);
 //console.log(person["age"]);
 
-console.log(person.likes['movies'].three);
+//console.log(person.likes['movies'].three);
+
+//Unary operatos - only works on one value - when you see +/- etc, will try to perfom mathematical conversion,
+// even if it is a string (will return NaN)
+
+// var age = 30;
+// age++; //postfix
+// console.log(age);
+
+//Ternary Operators
+
+// variable = expression ? true : false;
+
+// var num1 = 200;
+// var num2 = 100;
+
+// var result = (num1 > num2) ? 'That is correct' : 'That is wrong'
+// console.log(result);
+
+// Compound assignment operator
+
+// var num = 10;
+// num += 10; // compound assignment operator (also use +/- and / etc)
+
+
+comma operators
+
+allows for more than one operation in a single statement
