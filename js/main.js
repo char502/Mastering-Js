@@ -276,3 +276,55 @@ function shopping (item1, item2) {
 }
 
 shopping('Milk');
+
+//Primative and refernce values
+
+// 2 types values:
+
+// 1. primitive - undefined, null, boolean, number, string
+    // a -  the code will manipulate the actual object
+    // b - you cannot add properties to the primitive values
+    // c - value stored in variable object is copied (not referenced) from one 
+    //  variable to another
+
+// 2. reference - objects stored in memory
+    // a - the code will only be manipulating the reference to the object
+    // a -  not the object itself
+    // b - can add, change or delete properties or methods to ref values
+    // c - value stored in the variable object is copied into the location for new 
+    // variable but value is actually a pointer to an object stored in the 
+    // memory stack.
+    // once the operation is complete, two variables point to the same object
+    // changes are reflected to one another
+
+//js must determine if it is a primitive or a reference value
+
+
+//Primitive value
+
+var name = "Ryan";
+name.age = 30; // property age is gone
+// only reference values can have properties defined dynamically for later use
+console.log(name.age); // undefined
+
+//copying values
+
+//num2 also gets a value of 5, (same per num 1) but they are completely different
+var num1 = 5;
+var num2 = num1;
+
+
+//reference value
+
+var obj1 = new Object();
+var obj2 = obj1;
+obj1.name = "Charlotte";
+console.log(obj2.name); // Charlotte - both are pointing to the same object (a reference value)
+
+//Explanation
+//obj1 is filled with new Object instance
+//value is then copied to obj2
+//now both variables are pointing to the same object
+//when property name is set on obj1
+//--it can be accessed from obj2
+//because they both point (reference) to the same object
