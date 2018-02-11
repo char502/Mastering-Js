@@ -34,7 +34,7 @@ console.log(Array.isArray(colors))  // returns true
 
 
 /*
-convert to String
+Conversion methods - toString(), join()
 
 - toString()
 
@@ -42,7 +42,7 @@ var colors = ["red", "green", "yellow"];
 console.log(colors.toString())  // returns: red,green,yellow
 
 
-- join(" ")
+- join()
 
 var colors = ["red", "green", "yellow"];
 console.log(colors.join(" "))  // returns: red green yellow
@@ -53,8 +53,25 @@ console.log(colors.join(" - "))  // returns: red - green - yellow
 
 
 /*
+Stack methods - push(), pop()
 
+stack method = 'last in first out'
+push() accepts any number of args and add to end of array
+pop() removes last item in array
 
+- push() and pop()
+
+var colors = [];
+colors.push("red", "yellow", "blue");
+var removedItem = colors.pop();
+console.log(colors, "Removed Item: ", removedItem);
+
+- pop always takes last item of the array
 */
 
 
+/*
+Queue methods - shift(), unshift()
+
+
+*/
