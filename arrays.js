@@ -153,6 +153,8 @@ function compare(val1, val2) {
 
 ===
 
+Have to use comparison operators:
+
 var values = ["apples", "banana", "orange", "mango", "fig"];
 console.log(values.sort(compareStr));
 
@@ -168,7 +170,7 @@ function compareStr(val1, val2) {
     }
 };
 
-switch the comparison operators around if want to compare the other way i.e. < becomes > and > becomes < (can then compare z to a rather then a to z)
+***switch the comparison operators around if want to compare the other way i.e. < becomes > and > becomes < (can then compare z to a rather then a to z)***
 
 ===========================================
 
@@ -180,6 +182,12 @@ values.sort(function (a, b) {
     return a - b;
 });
 console.log(values);
+
+*/
+
+
+/*
+Manipulation methods - concat(), slice(), splice()
 
 
 */
