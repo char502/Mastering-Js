@@ -97,12 +97,9 @@ console.log(colors, "Removed Item: ", removedItem);
 // [ 'cyan', 'red', 'blue', 'green' ] 'Removed Item: ' 'purple'
 */
 
-
 /*
 Reordering methods - reverse(), sort()
 
 
 
-
 */
-
