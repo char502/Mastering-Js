@@ -77,5 +77,32 @@ queue method = 'first in first out'
 unshift() - adds any number of args to front of array
 shift() - removes first item in the array and returns it
 
+unshift()
+
+var colors = [];
+colors.unshift("red", "blue", "green");
+colors.unshift("purple", "cyan");
+console.log(colors); // [ 'purple', 'cyan', 'red', 'blue', 'green' ]
+
+==============================
+
+shift()
+
+var colors = [];
+colors.unshift("red", "blue", "green");
+colors.unshift("purple", "cyan"); //adds purple and cyan in front or rbg
+var removedItem = colors.shift();
+console.log(colors, "Removed Item: ", removedItem);
+
+// [ 'cyan', 'red', 'blue', 'green' ] 'Removed Item: ' 'purple'
+*/
+
+
+/*
+Reordering methods - reverse(), sort()
+
+
+
 
 */
+
