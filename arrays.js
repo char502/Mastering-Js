@@ -56,8 +56,8 @@ console.log(colors.join(" - "))  // returns: red - green - yellow
 Stack methods - push(), pop()
 
 stack method = 'last in first out'
-push() accepts any number of args and add to end of array
-pop() removes last item in array
+push() - accepts any number of args and add to end of array
+pop() - removes last item in array
 
 - push() and pop()
 
@@ -72,6 +72,10 @@ console.log(colors, "Removed Item: ", removedItem);
 
 /*
 Queue methods - shift(), unshift()
+
+queue method = 'first in first out'
+unshift() - adds any number of args to front of array
+shift() - removes first item in the array and returns it
 
 
 */
