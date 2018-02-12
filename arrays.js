@@ -302,4 +302,66 @@ Each method accepts two arguments:
 2. And optional scope object, in which to run the function
 
 
+- every()
+
+- checks if ALL the values in an array are true or false as per a given condition (expressed in a function)
+- does not change the original array
+
+var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+var everyResult = numbers.every(function(item, index, array) {
+    return item > 2; // Are ALL values in the array greater than 2
+});
+console.log(everyResult); //false
+
+==================================================================
+
+- some()
+
+- checks if ANY values in an array are true or false as per a given condition (expressed in a function)
+
+
+var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+
+var someNumbers = numbers.some(function(item, index, array) {
+    return item > 2; //Are ANY values in the array greater than 2
+});
+console.log(someNumbers); // true
+
+==================================================================
+
+- filter()
+
+var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+
+var filterResult = numbers.filter(function(item, index, array) {
+    return item > 2;
+});
+console.log(filterResult); 
+
+// [ 3, 4, 5, 4, 3 ] - has filtered to show only the numbers greater than 2
+
+===================================================================
+
+- forEach
+
+- calls a provided function once for each element in an array, in order
+- does not have a return statement
+
+var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+
+numbers.forEach(function(item, index, array) {
+    console.log(item);
+});
+
+
+// 1
+// 2
+// 3
+// 4
+// 5
+// 4
+// 3
+// 2
+// 1
+
 */
