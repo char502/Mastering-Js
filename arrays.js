@@ -301,6 +301,7 @@ Each method accepts two arguments:
 1. A function to run on each item
 2. And optional scope object, in which to run the function
 
+index and array are also available as arguments for these methods if required
 
 - every()
 
@@ -327,6 +328,9 @@ var someNumbers = numbers.some(function(item, index, array) {
 });
 console.log(someNumbers); // true
 
+
+index and array are also available for these methods if required
+
 ==================================================================
 
 - filter()
@@ -342,7 +346,7 @@ console.log(filterResult);
 
 ===================================================================
 
-- forEach
+- forEach()
 
 - calls a provided function once for each element in an array, in order
 - does not have a return statement
@@ -363,5 +367,57 @@ numbers.forEach(function(item, index, array) {
 // 3
 // 2
 // 1
+
+====================================================================
+
+- map()
+
+- creates a new array with the results of calling a function for every array element
+-calls the provided function once for each element in an array in order
+- does not change the original array
+
+var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+
+var mapResult = numbers.map(function(item, index, array) {
+    return "Num " + item;
+});
+console.log(mapResult);
+
+// [ 'Num 1',
+//   'Num 2',
+//   'Num 3',
+//   'Num 4',
+//   'Num 5',
+//   'Num 4',
+//   'Num 3',
+//   'Num 2',
+//   'Num 1' ]
+
+*/
+
+/*
+
+Reduce method - reduce(), reduceRight()
+
+- both methods iterate over all items in the array and build up a value that is ultimately returned
+
+- they take two arguments:
+
+1. function call on each item
+2. Initial value upon which the reduction is 
+
+the function passed in accepts four arguments:
+- previousValue
+- currentValue
+- itemIndex
+- arrayObject
+
+
+var numbers = [1, 2, 3, 4, 5];
+
+var sum = numbers.reduce(function(prevValue, currentValue, index, array) {
+    return prevValue + currentValue;
+});
+console.log(sum);
 
 */
