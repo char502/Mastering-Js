@@ -265,10 +265,41 @@ console.log('Colors: ', colors, 'Deleted: ', deletedItems);
 /*
 Location methods - indexOf(), lastIndexOf()
 
-- both methods accepts 2 x arguments
+- both methods accept 2 x arguments:
 
 - The item to look for 
 - an optional index from which to start looking
+- returns -1 if item is not found
+
+indexOf()
+
+- if no start position specified, starts at the beginning
+- if item present more than once, returns position of FIRST occurance
+
+var colors = ["red", "blue", "green", "black", "purple", "gold"];
+console.log(colors.indexOf("gold"))
+
+// 5
+
+
+lastIndexOf()
+
+- if no position specified, starts at end and finishes at beginning
+- if item present more than once, returns position of LAST occurance
+
+var colors = ["red", "blue", "green", "black", "purple", "gold"];
+console.log(colors.lastIndexOf("gold"))
+*/
+
+
+
+/*
+Iterative methods - every(), some(), filter() forEach(), map()
+
+Each method accepts two arguments:
+
+1. A function to run on each item
+2. And optional scope object, in which to run the function
 
 
 */
