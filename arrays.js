@@ -77,7 +77,7 @@ queue method = 'first in first out'
 unshift() - adds any number of args to front of array
 shift() - removes first item in the array and returns it
 
-unshift()
+- unshift()
 
 var colors = [];
 colors.unshift("red", "blue", "green");
@@ -86,7 +86,7 @@ console.log(colors); // [ 'purple', 'cyan', 'red', 'blue', 'green' ]
 
 ==============================
 
-shift()
+- shift()
 
 var colors = [];
 colors.unshift("red", "blue", "green");
@@ -101,7 +101,7 @@ console.log(colors, "Removed Item: ", removedItem);
 /*
 Reordering methods - reverse(), sort()
 
-reverse()
+- reverse()
 
 var values = [1, 2, 3, 4, 5];
 values.reverse();
@@ -187,7 +187,88 @@ console.log(values);
 
 
 /*
-Manipulation methods - concat(), slice(), splice()
+Manipulation methods - concat(), slice(), splice() - lets you work with the items that are ALREADY in the array
+
+- concat()
+
+Joins two arrays
+Does NOT modify the original array - returns a new array
+
+var colors = ["red", "yellow", "blue"];
+var totalColors = colors.concat(["black", "purple"]);
+console.log('Original: ', colors, 'New: ', totalColors); 
+
+// [ 'red', 'yellow', 'blue', 'black', 'purple' ]
+
+
+- slice()
+
+- takes two arguments, starting and stopping position
+
+- if given only one argument, it returns all items between that position and the end of the array
+
+- if given two arguments, it returns all items between start and the end position, not including the end position
+
+- RETURNS A NEW ARRAY, ORIGINAL NOT CHANGED
+
+
+
+var colors = ["red", "yellow", "blue", "green", "black"];
+console.log(colors.slice(1, 4)); 
+
+// [ 'yellow', 'blue', 'green' ] - does not include last one (arr pos 4)
+
+
+- splice()
+
+- can use to insert / replace / delete
+
+- delete - using two arguments
+- position of first item and number of items to delete
+- insert/replace - same as above with 0 arguments and items to include
+
+- CHANGES THE ORIGINAL ARRAY
+
+
+Using splice to delete:
+
+var colors = ["red", "yellow", "blue", "green", "black"];
+var deletedItems = colors.splice(3, 2);
+console.log('Colors: ', colors, 'Deleted: ', deletedItems); 
+
+// Colors:  [ 'red', 'yellow', 'blue' ] 
+// Deleted:  [ 'green', 'black' ]
+
+===========================================================
+
+var colors = ["red", "yellow", "blue", "green", "black"];
+var deletedItems = colors.splice(1, 3);
+console.log('Colors: ', colors, 'Deleted: ', deletedItems);
+
+// Colors:  [ 'red', 'black' ] 
+// Deleted:  [ 'yellow', 'blue', 'green' ]
+
+===========================================================
+To Insert (use 3 args)
+
+i.e. 1 for starting position, 0 next (if don't want to delete anything), third position, anything want to add.
+
+
+var colors = ["red", "yellow", "blue", "green", "black"];
+var deletedItems = colors.splice(1, 0, 'i am not a color');
+console.log('Colors: ', colors, 'Deleted: ', deletedItems);
+
+// Colors:  [ 'red', 'i am not a color', 'yellow', 'blue', 'green', 'black' ] Deleted:  []
+*/
+
+
+/*
+Location methods - indexOf(), lastIndexOf()
+
+- both methods accepts 2 x arguments
+
+- The item to look for 
+- an optional index from which to start looking
 
 
 */
