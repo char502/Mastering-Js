@@ -420,4 +420,8 @@ var sum = numbers.reduce(function(prevValue, currentValue, index, array) {
 });
 console.log(sum);
 
+
+reduceRight()
+
+- works the same (reduces the array to a single value) but executes from right to left
 */
