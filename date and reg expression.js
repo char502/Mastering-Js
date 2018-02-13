@@ -52,9 +52,37 @@ Link: https://momentjs.com/
 /*
 regular expressions
 
+- a sequence of characters that forms a pattern to match character combinations in strings
 
+var re = /hello/
 
+regular expression methods
+test() and match()
 
+string methods - match, search, replace, split
+
+you create a regular string using new keyword or inbetween two //
+
+=================================================================
+
+var re = /hello/;
+var sentence = "hello world"; // true
+console.log(re.test(sentence));
+
+=================================================================
+
+var re = /^\d{3}$/; // looks for 3 digits (numbers) at the beginning of something then ends
+console.log(re.test("123hello")); // false
+console.log(re.test("123hello world"));
+
+/^\d{3}$/ - explained
+
+// - anything between these characters is part of the regular expression
+
+^   - beginning
+\d  - digit
+$   - end
+g   - global  
 
 */
 
