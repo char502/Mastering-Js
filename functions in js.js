@@ -145,7 +145,56 @@ function callingSum(num1, num2) {
 // will pass the arguments object itself or an array
 // returning the function's internal objects
 
+console.log(callingSum(1, 1));
+
+============
+
+Example with an array
+
+function sum(num1, num2) {
+    return num1 + num2;
+}
+
+function callingSum(num1, num2) {
+    return sum.apply(this, [num1, num2]);
+}
+
+console.log(callingSum(1, 1));
+
+=========
+
+- call
+
+- Similar to apply(),
+- But arguments passed to it differently
+- first arg = the this value
+- remaining args passed directly into the function
+
+function sum(num1, num2) {
+    return num1 + num2;
+}
+
+function callingSum(num1, num2) {
+    return sum.call(this, num1, num2);
+}
+
 console.log(callingSum(1, 1))
 
+=========
+
+- bind
+
+- creates a new function instance whose 'this' value is bound to the value that was passed to the bind().
+
+window.color = "red";
+
+var obj = {color: "blue"}
+
+function sayColor() {
+    console.log(this.color) // bound to the global execution context unless changed by bind as per below
+}
+
+var objSayColor = sayColor.bind(obj); // will bind to whatever is specified here
+objSayColor(); // blue
 
 */
