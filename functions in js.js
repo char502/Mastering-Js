@@ -57,21 +57,95 @@ What is inside functions?
 
 - function object also has additional 'caller' which contains.... a reference to the function that called this function or null
 
-- this is a reference to the execution contextthat the function....is operating on
+- this is a reference to the execution context that the function....is operating on
 
 - when a function is called in the global scope of a web page...this points to window object
+
+==================================================================
+
+- Arguments property - callee - pointer to the function....that owns the argument
 
 function factorial(num) {
     if (num < 1) {
         return 1;
     } else {
-        //return num * factorial(num - 1);
-        return num * arguments.callee(num - 1);
+        //return num * factorial(num - 1); multiply by the function itself with it's argument incremented by 1
+        return num * arguments.callee(num - 1); // may sometimes use this instead as, if use the function itself in another function might not ge the same result (so this is possily safer in some circumstances)
     }
 }
-//console.log(factorial(5));
+console.log(factorial(5));
 //console.log(arguments.callee);
 
 // 5 - 4 3 2 1 = 120
+
+=================================================================
+
+- function object also has additional 'caller' which contains.... a reference to the function that called this function or null
+
+function outside() {
+    inside();
+}
+
+function inside() {
+    console.log(inside.caller);
+    // console.log(arguments.callee.caller);
+}
+
+//displays the source code of outer
+console.log(outside());
+
+============================================
+
+Functions' this object
+
+- this is a reference to the execution context that the function....is operating on
+
+- when a function is called in the global scope of a web page...this points to window object
+
+window.color = "red"; // global context
+
+var obj = { color: "blue" }; // object's own context
+
+function sayColor() {
+    console.log(this.color); // function's own context
+}
+
+sayColor(); // red - the only context available to this function here
+
+obj.sayColor = sayColor;
+obj.sayColor(); // blue
+
+================================================
+
+function methods
+
+- apply
+- call
+- bind
+
+
+- apply
+
+- accepts 2 x arguments
+- value of this inside the function and an array of arguments
+- The second argument may be an instance of Array
+- But it can also be the arguments object
+
+
+function sum(num1, num2) {
+    return num1 + num2;
+}
+
+function callingSum(num1, num2) {
+    return sum.apply(this, arguments); 
+}
+
+// wants to return the function and apply certain things
+// apply the value if this - to the function's own execution context
+// will pass the arguments object itself or an array
+// returning the function's internal objects
+
+console.log(callingSum(1, 1))
+
 
 */
