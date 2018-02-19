@@ -129,8 +129,54 @@ var res = str.substr(11, 1);
 ====================================================
 
 - indexOf()
+- lastIndexOf()
 - trim()
 - toUpperCase()
 - toLowerCase()
+
+
+- indexOf(), lastIndexOf()
+
+- returns -1 if does not find the specified value
+
+
+var strVal = "hello world";
+
+console.log(strVal.indexOf("o")); //4 - looks from the beginning
+
+console.log(strVal.lastIndexOf("o")); // 7 - looks from the end
+
+===
+
+Takes 2 x arguments
+
+var strVal = "hello world";
+
+// console.log(strVal.indexOf("o", 6)); // 7 - looks // from the beginning
+
+console.log(strVal.lastIndexOf("o", 6)); // 4 - looks from the end
+
+=================================================
+
+- trim()
+
+- removes whitespace from both sides of string
+- does not change the original string
+
+var strVal = "          hello world.       ";
+
+//i.e. a lot of whitespace when user fills in an //online form
+
+console.log(strVal.trim()); // hello world. - removes the whitespace from both sides
+
+=======
+
+- toUpperCase(), - toLowerCase()
+
+var strVal = "hello world!";
+
+console.log(strVal.toUpperCase()); // HELLO WORLD!
+console.log(strVal.toLowerCase()); // hello world!
+
 
 */
