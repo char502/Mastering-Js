@@ -178,5 +178,85 @@ var strVal = "hello world!";
 console.log(strVal.toUpperCase()); // HELLO WORLD!
 console.log(strVal.toLowerCase()); // hello world!
 
+===================================================
+
+- match()
+- search()
+- replace()
+- split()
+
+
+- match()
+
+- same as calling RegExp objects exec() method.
+- accepts regular expression string or RegExp object
+
+var text = "cat, bat, sat, fat";
+var pattern = /.at/;
+
+var matches = text.match(pattern);
+console.log(matches.index); // 0 - found first match
+console.log(matches[0]); // cat - can see what is at first match
+
+===
+
+- search()
+
+- takes one argument, same as match
+- returns the index of the first pattern occurance in the string ....
+- or -1 if it's not
+
+
+var text = "cat, bat, sat, fat";
+var pattern = /at/;
+
+var matches = text.search(pattern);
+
+// returns 1, which is the first position of "at" in //the string
+
+console.log(matches); // 1
+
+===
+
+- replace()
+
+- takes 2 x arguments
+- first arg = RegExp object or a string
+- second arg can be a string or a function
+
+
+var text = "cat, bat, sat, fat";
+var result = text.replace("at", "ond"); // replace the first instance of "at" with "ond"
+
+
+console.log(result); // cond, bat, sat, fat
+
+==
+
+to replace all instances (use a reg expression):
+
+var text = "cat, bat, sat, fat";
+var result = text.replace(/(at)/g, "ond"); // 
+// replace all instances of "at" with "ond"
+
+console.log(result); // cond, bond, sond, fond
+
+another example
+
+var text = "cat, bat, sat, fat";
+var result = text.replace(/(.at)/g, "word($1)"); //
+// replace all instances of "at" with "ond"
+
+console.log(result); 
+// word(cat), word(bat), word(sat), word(fat)
+
+
+===
+
+- split()
+
+- separates the string into an array of substrings
+- ....based on a separator
+
 
 */
