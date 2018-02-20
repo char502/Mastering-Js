@@ -259,4 +259,12 @@ console.log(result);
 - ....based on a separator
 
 
+var colorText = "red, blue, green, yellow"
+
+var colors1 = colorText.split(",");
+console.log(colors1); 
+// [ 'red', ' blue', ' green', ' yellow' ]
+
+
+
 */
