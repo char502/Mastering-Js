@@ -107,6 +107,12 @@ Person.prototype.sayName = function() {
 var person1 = new Person();
 person1.sayName(); // Charlotte
 
-Properties are added directly to the prototype property
+// Properties are added directly to the // prototype property
+
+var person2 = new Person();
+person1.sayName(); // Charlotte
+
+console.log(Person.prototype.isPrototypeOf(person1));
+console.log(Person.prototype.isPrototypeOf(person2));
 
 */

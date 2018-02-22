@@ -225,7 +225,7 @@ switch (i) {
 
 // functions
 
-function total (one, two) {
+function total(one, two) {
   var totalThis = one + two
   return totalThis
 }
@@ -235,7 +235,7 @@ console.log(result)
 
 // multiple returns - as soon as the code matches it will stop executing 
 
-function nameCheck (name) {
+function nameCheck(name) {
   if (name == 'Charlotte') {
     return 'Hi Charlotte'
   } else {
@@ -251,7 +251,7 @@ console.log(result)
 // js creates and internal array to hold the arguments whether defined or not
 // However, better to have the params defined as clearer to read/ less confusing when come back to it later on
 
-function sayHi () { // arguments not defined in ()
+function sayHi() { // arguments not defined in ()
   return arguments[0] + ' ' + arguments[1] + ' ' + arguments[2] // can still specify using array/bracket notation
 }
 
@@ -259,7 +259,7 @@ alert(sayHi('Charlotte', 'Js functions', 'right'))
 
 // but better like this:
 
-function sayHi (name, something, opinion) { // arguments defined in()
+function sayHi(name, something, opinion) { // arguments defined in()
   return arguments[0] + ' ' + arguments[1] + ' ' + arguments[2] // can still specify using array/bracket notation
 }
 
@@ -267,7 +267,7 @@ alert(sayHi('Charlotte', 'Js functions', 'right'))
 
 // Can determine number of arguments using Arraylength property
 
-function shopping (item1, item2) {
+function shopping(item1, item2) {
   if (arguments.length >= 2) {
     console.log('you are granted 20% discount')
   } else if (arguments.length <= 1) {
@@ -277,25 +277,25 @@ function shopping (item1, item2) {
 
 shopping('Milk');
 
-//Primative and refernce values
+//Primative and reference values
 
 // 2 types values:
 
 // 1. primitive - undefined, null, boolean, number, string
-    // a -  the code will manipulate the actual object
-    // b - you cannot add properties to the primitive values
-    // c - value stored in variable object is copied (not referenced) from one 
-    //  variable to another
+// a -  the code will manipulate the actual object
+// b - you cannot add properties to the primitive values
+// c - value stored in variable object is copied (not referenced) from one 
+//  variable to another
 
 // 2. reference - objects stored in memory
-    // a - the code will only be manipulating the reference to the object
-    // a -  not the object itself
-    // b - can add, change or delete properties or methods to ref values
-    // c - value stored in the variable object is copied into the location for new 
-    // variable but value is actually a pointer to an object stored in the 
-    // memory stack.
-    // once the operation is complete, two variables point to the same object
-    // changes are reflected to one another
+// a - the code will only be manipulating the reference to the object
+// a -  not the object itself
+// b - can add, change or delete properties or methods to ref values
+// c - value stored in the variable object is copied into the location for new 
+// variable but value is actually a pointer to an object stored in the 
+// memory stack.
+// once the operation is complete, two variables point to the same object
+// changes are reflected to one another
 
 //js must determine if it is a primitive or a reference value
 
