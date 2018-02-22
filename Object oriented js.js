@@ -115,4 +115,37 @@ person1.sayName(); // Charlotte
 console.log(Person.prototype.isPrototypeOf(person1));
 console.log(Person.prototype.isPrototypeOf(person2));
 
+// ======
+
+// Object keys
+
+//retrieve a list of properties off an object keys // method
+
+var keys = Object.keys(Person.prototype);
+console.log(keys);
+// [ 'name', 'age', 'sayName' ]
+
+
+// ===
+
+Can also use object literal
+
+Person.prototype = {
+    name: "Charlotte",
+    age: 30,
+    sayName: function() {
+        console.log(this.name);
+    }
+};
+
+var person1 = new Person();
+person1.sayName(); // Charlotte
+
+var person2 = new Person();
+person1.sayName(); // Charlotte
+
+console.log(Person.prototype.isPrototypeOf(person1));
+console.log(Person.prototype.isPrototypeOf(person2));
+
+
 */
