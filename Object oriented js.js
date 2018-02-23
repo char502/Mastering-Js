@@ -191,9 +191,46 @@ console.log(Person.prototype.isPrototypeOf(person2));
 
 ===============================
 
-Combination of Constructor and PRototype Pattern
+Combination of Constructor and Prototype Pattern (most used pattern)
+
+- With this approach, each instance ends up with its own copy of the instance properties
+- But they all share references to methods
 
 
+function Person(name, age, job) {
+    this.name = name;
+    this.age = age;
+    this.job = job;
+    this.friends = ["Zen" , "Ram"];
+}
 
+Person.prototype = {
+    constructor: Person,
+    sayName: function() {
+        console.log(this.name);
+    } 
+};
+
+var person1 = new Person("Charlotte", 40, "Web Developer");
+person1.friends.push("Thomas");
+
+var person2 = new Person("James", 36, "Customer Services");
+
+console.log(person1, person2);
+
+output: 
+
+Person {
+  name: 'Charlotte',
+  age: 40,
+  job: 'Web Developer',
+  friends: [ 'Zen', 'Ram', 'Thomas' ] 
+}
+Person {
+  name: 'James',
+  age: 36,
+  job: 'Customer Services',
+  friends: [ 'Zen', 'Ram' ] 
+}
 
 */
