@@ -130,6 +130,10 @@ console.log(keys);
 
 Can also use object literal
 
+function Person() {
+    //
+}
+
 Person.prototype = {
     name: "Charlotte",
     age: 30,
@@ -146,6 +150,50 @@ person1.sayName(); // Charlotte
 
 console.log(Person.prototype.isPrototypeOf(person1));
 console.log(Person.prototype.isPrototypeOf(person2));
+
+var keys = Object.keys(Person.prototype);
+console.log(keys);
+
+Output: 
+
+Charlotte
+Charlotte
+true
+true
+[ 'name', 'age', 'sayName' ]
+
+
+======
+
+Defining the constructor itself
+
+function Person() {
+    //
+}
+
+Person.prototype = {
+    constructor: Person,
+    name: "Charlotte",
+    age: 30,
+    sayName: function() {
+        console.log(this.name);
+    }
+};
+
+var person1 = new Person();
+person1.sayName(); // Charlotte
+
+var person2 = new Person();
+person1.sayName(); // Charlotte
+
+console.log(Person.prototype.isPrototypeOf(person1));
+console.log(Person.prototype.isPrototypeOf(person2));
+
+===============================
+
+Combination of Constructor and PRototype Pattern
+
+
 
 
 */
