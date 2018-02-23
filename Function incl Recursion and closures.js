@@ -69,8 +69,31 @@ function eat() {
 var favFruit = eat();
 favFruit(); // Apple
 
+=======
 
+object closures
 
+- "this" object is based on the context in which a function is executed
+
+- anonymous functions are not bound to an object in "this" context
+
+var name = "The window";
+
+var object = {
+    name: "The object",
+    getName: function() {
+        var that = this;
+        return function() {
+            return that.name;
+        };
+    }
+};
+
+console.log(object.getName()());
+
+=======
+
+block scope and IIFE
 
 
 */
