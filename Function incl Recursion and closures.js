@@ -95,5 +95,14 @@ console.log(object.getName()());
 
 block scope and IIFE
 
+// Prevents a function becoming a part of the global execution context
+// Achieve this by wrapping the function in parenthesis
+// Therefore creating it within its own scope
+
+(function sayColor() {
+    var color = "red";
+    console.log(color);
+})();
+
 
 */
