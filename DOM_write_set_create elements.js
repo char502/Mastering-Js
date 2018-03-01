@@ -28,6 +28,12 @@ function myClick() {
 
 Finding elements in the DOM using selectors
 
+document.getElementById("root"); // get by id
+document.getElementsByClassName("intro"); // class names
+document.getElementsByTagName("p") // tags such as p or h1
+document.querySelectorAll("p.intro"); // using css selectors
+document.getElementById("root").innerHTML = "lksdlsnlksdn";
+
 
 
 */
